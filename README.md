@@ -1,4 +1,4 @@
-# Essential Watch Face
+# Essential Gradients Watch Face
 
 Interactive Android Wear watch face.
 - Ambient mode
