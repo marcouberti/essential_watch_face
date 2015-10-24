@@ -165,7 +165,7 @@ public class NatureGradientsFace extends CanvasWatchFaceService {
             mSecondsCirclePaint.setAntiAlias(true);
             mSecondsCirclePaint.setStyle(Paint.Style.FILL_AND_STROKE);
             mSecondsCirclePaint.setColor(Color.WHITE);
-            mSecondsCirclePaint.setStrokeWidth(ScreenUtils.convertDpToPixels(getApplicationContext(), 1.5f));
+            mSecondsCirclePaint.setStrokeWidth(ScreenUtils.convertDpToPixels(getApplicationContext(), 3f));
 
             blackFillPaint = new Paint();
             blackFillPaint.setColor(Color.BLACK);
@@ -175,13 +175,13 @@ public class NatureGradientsFace extends CanvasWatchFaceService {
             circleStrokePaint.setColor(Color.WHITE);
             circleStrokePaint.setStyle(Paint.Style.STROKE);
             circleStrokePaint.setAntiAlias(true);
-            circleStrokePaint.setStrokeWidth(ScreenUtils.convertDpToPixels(getApplicationContext(), 1.5f));
+            circleStrokePaint.setStrokeWidth(ScreenUtils.convertDpToPixels(getApplicationContext(), 2f));
 
             complicationsCircleStrokePaint = new Paint();
             complicationsCircleStrokePaint.setColor(Color.WHITE);
             complicationsCircleStrokePaint.setStyle(Paint.Style.STROKE);
             complicationsCircleStrokePaint.setAntiAlias(true);
-            complicationsCircleStrokePaint.setStrokeWidth(ScreenUtils.convertDpToPixels(getApplicationContext(), 1f));
+            complicationsCircleStrokePaint.setStrokeWidth(ScreenUtils.convertDpToPixels(getApplicationContext(), 1.0f));
             /*
             mHandPaint = new Paint();
             mHandPaint.setColor(resources.getColor(R.color.time_date_color));
@@ -277,12 +277,6 @@ public class NatureGradientsFace extends CanvasWatchFaceService {
             if (!mAmbient) {
                 //BACKGROUND WITH GRADIENT
                 canvas.drawRect(0, 0, canvas.getWidth(), canvas.getHeight(), mBackgroundPaint);
-                //SECONDS INDICATOR
-                canvas.save();
-                canvas.rotate(secondsRotation, width / 2, width / 2);
-                canvas.drawLine(width/2, height / 25, width/2, height / 25 + height / 15, mSecondsCirclePaint);
-                //canvas.drawLine(width / 2, ScreenUtils.convertDpToPixels(getApplicationContext(),15), ScreenUtils.convertDpToPixels(getApplicationContext(),5), mSecondsCirclePaint);
-                canvas.restore();
             }else {//AMBIENT MODE
                 //BLACK BG TO SAVE ENERGY
                 canvas.drawColor(Color.BLACK);
@@ -299,19 +293,30 @@ public class NatureGradientsFace extends CanvasWatchFaceService {
             canvas.drawLine(width / 2, height / 2 + height / 15, width / 2, (height / 15) * 4, mSecondsCirclePaint);
             canvas.restore();
 
+            int R = 4;
+
             if (!mAmbient) {
-                canvas.drawCircle(width / 2, height / 2, ScreenUtils.convertDpToPixels(getApplicationContext(), 3), mBackgroundPaint);
+                canvas.drawCircle(width / 2, height / 2, ScreenUtils.convertDpToPixels(getApplicationContext(), R), mBackgroundPaint);
             }else {
-                canvas.drawCircle(width / 2, height / 2, ScreenUtils.convertDpToPixels(getApplicationContext(), 3), blackFillPaint);
+                canvas.drawCircle(width / 2, height / 2, ScreenUtils.convertDpToPixels(getApplicationContext(), R), blackFillPaint);
             }
             //circle stroke
-            canvas.drawCircle(width / 2, height / 2, ScreenUtils.convertDpToPixels(getApplicationContext(), 3), circleStrokePaint);
+            canvas.drawCircle(width / 2, height / 2, ScreenUtils.convertDpToPixels(getApplicationContext(), R), circleStrokePaint);
 
             //COMPLICATIONS
             if(INFO_DETAILS_MODE == 0) {
                 //essential, no complications show
             }else {
-                //circle
+                //SHOW SECONDS
+                if (!mAmbient) {
+                    canvas.save();
+                    canvas.rotate(secondsRotation, width / 2, width / 2);
+                    canvas.drawLine(width / 2, height / 25, width / 2, height / 25 + height / 15, mSecondsCirclePaint);
+                    //canvas.drawLine(width / 2, ScreenUtils.convertDpToPixels(getApplicationContext(),15), ScreenUtils.convertDpToPixels(getApplicationContext(),5), mSecondsCirclePaint);
+                    canvas.restore();
+                }
+
+                /*
                 canvas.drawCircle((width / 2) *1.5f, height / 2, ScreenUtils.convertDpToPixels(getApplicationContext(), 10), complicationsCircleStrokePaint);
                 //day of month
                 String dayOfMonth = new SimpleDateFormat("d").format(Calendar.getInstance().getTime()).toUpperCase();
@@ -323,6 +328,7 @@ public class NatureGradientsFace extends CanvasWatchFaceService {
                 int left = (int)(((width / 2) *1.5f) - dateBounds.width() / 2f);
                 int top = (int)(height/2+dateBounds.height() / 2f);
                 canvas.drawText(format, left, top, mDatePaint);
+                */
             }
             /*
             //MODE DAY WEEK AND DATE
