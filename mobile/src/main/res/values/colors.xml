@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="digital_background">#000000</color>
+    <color name="digital_text">#ffffff</color>
+    <color name="color_primary">#3F51B5</color>
+    <color name="color_primary_dark">#303F9F</color>
+    <color name="color_accent">#E91E63</color>
+    <color name="config_activity_background">#ffffff</color>
+    <color name="config_activity_header_text_color">#ffffff</color>
+    <color name="color_item_label_color">#ffffff</color>
+    <color name="color_item_circle_border_color">#424242</color>
+
+    <!--AURORA-->
+    <color name="aurora_col_1">#FF3399</color>
+    <color name="aurora_col_2">#6666FF</color>
+    <array name="aurora_array">
+        <item>@color/aurora_col_1</item>
+        <item>@color/aurora_col_2</item>
+    </array>
+
+    <!--FIRE-->
+    <color name="fire_col_1">#f3d700</color>
+    <color name="fire_col_2">#FF003D</color>
+    <array name="fire_array">
+        <item>@color/fire_col_1</item>
+        <item>@color/fire_col_2</item>
+    </array>
+
+    <!--ACQUA-->
+    <color name="aqua_col_1">#1D976C</color>
+    <color name="aqua_col_2">#93F9B9</color>
+    <array name="aqua_array">
+        <item>@color/aqua_col_1</item>
+        <item>@color/aqua_col_2</item>
+    </array>
+
+    <!--LOVE-->
+    <color name="love_col_1">#EB3349</color>
+    <color name="love_col_2">#F45C43</color>
+    <array name="love_array">
+        <item>@color/love_col_1</item>
+        <item>@color/love_col_2</item>
+    </array>
+
+    <!-- AFTER SUNSET -->
+    <color name="after_sunset_col_1">#E55D87</color>
+    <color name="after_sunset_col_2">#5FC3E4</color>
+    <array name="after_sunset_array">
+        <item>@color/after_sunset_col_1</item>
+        <item>@color/after_sunset_col_2</item>
+    </array>
+
+    <!-- FOREST -->
+    <color name="forest_col_1">#afef00</color>
+    <color name="forest_col_2">#006e09</color>
+    <array name="forest_array">
+        <item>@color/forest_col_1</item>
+        <item>@color/forest_col_2</item>
+    </array>
+
+    <!-- TROPICAL PARADISE -->
+    <color name="tropical_col_1">#00C9FF</color>
+    <color name="tropical_col_2">#92FE9D</color>
+    <array name="tropical_array">
+        <item>@color/tropical_col_1</item>
+        <item>@color/tropical_col_2</item>
+    </array>
+
+    <!-- Violet illusion -->
+    <color name="violet_illusion_col_1">#fc00ff</color>
+    <color name="violet_illusion_col_2">#00dbde</color>
+    <array name="violet_illusion_array">
+        <item>@color/violet_illusion_col_1</item>
+        <item>@color/violet_illusion_col_2</item>
+    </array>
+
+    <!-- Beach -->
+    <color name="beach_illusion_col_1">#70e1f5</color>
+    <color name="beach_illusion_col_2">#ffd194</color>
+    <array name="beach_illusion_array">
+        <item>@color/beach_illusion_col_1</item>
+        <item>@color/beach_illusion_col_2</item>
+    </array>
+
+    <!-- Fruit flavour -->
+    <color name="fruit_flavour_col_1">#FF4E50</color>
+    <color name="fruit_flavour_col_2">#F9D423</color>
+    <array name="fruit_flavour_array">
+        <item>@color/fruit_flavour_col_1</item>
+        <item>@color/fruit_flavour_col_2</item>
+    </array>
+
+    <!-- Sun is rising -->
+    <color name="sun_rise_col_1">#0ABFBC</color>
+    <color name="sun_rise_col_2">#FC354C</color>
+    <array name="sun_rise_array">
+        <item>@color/sun_rise_col_1</item>
+        <item>@color/sun_rise_col_2</item>
+    </array>
+
+    <!-- Summer -->
+    <color name="summer_col_1">#f30f58</color>
+    <color name="summer_col_5">#07e2a7</color>
+    <array name="summer_array">
+        <item>@color/summer_col_1</item>
+        <item>@color/summer_col_5</item>
+    </array>
+
+    <!-- Terra -->
+    <color name="terra_col_1">#530A15</color>
+    <color name="terra_col_2">#E07F15</color>
+    <array name="terra_array">
+        <item>@color/terra_col_1</item>
+        <item>@color/terra_col_2</item>
+    </array>
+
+    <!-- Sunflower -->
+    <color name="sunflower_col_1">#FAFF89</color>
+    <color name="sunflower_col_2">#FEB60A</color>
+    <array name="sunflower_array">
+        <item>@color/sunflower_col_1</item>
+        <item>@color/sunflower_col_2</item>
+    </array>
+
+    <!-- Wild berries -->
+    <color name="wildberries_col_1">#C70844</color>
+    <color name="wildberries_col_2">#64006D</color>
+    <array name="wildberries_array">
+        <item>@color/wildberries_col_1</item>
+        <item>@color/wildberries_col_2</item>
+    </array>
+
+    <!-- Country chic -->
+    <color name="country_col_1">#FFDE96</color>
+    <color name="country_col_2">#8E9FBD</color>
+    <array name="country_array">
+        <item>@color/country_col_1</item>
+        <item>@color/country_col_2</item>
+    </array>
+
+    <!-- Water melon -->
+    <color name="watermelon_col_1">#EE3271</color>
+    <color name="watermelon_col_2">#C9F38C</color>
+    <array name="watermelon_array">
+        <item>@color/watermelon_col_1</item>
+        <item>@color/watermelon_col_2</item>
+    </array>
+
+    <!-- Gold fish -->
+    <color name="goldfish_col_1">#ee5700</color>
+    <color name="goldfish_col_2">#00d5ff</color>
+    <array name="goldfish_array">
+        <item>@color/goldfish_col_1</item>
+        <item>@color/goldfish_col_2</item>
+    </array>
+
+    <!-- Deep space -->
+    <color name="deepspace_col_1">#0e4e49</color>
+    <color name="deepspace_col_2">#000000</color>
+    <array name="deepspace_array">
+        <item>@color/deepspace_col_1</item>
+        <item>@color/deepspace_col_2</item>
+    </array>
+
+    <!-- Cocktail on the beach -->
+    <color name="bee_col_1">#ffc400</color>
+    <color name="bee_col_2">#00ffd6</color>
+    <array name="bee_array">
+        <item>@color/bee_col_1</item>
+        <item>@color/bee_col_2</item>
+    </array>
+
+    <!-- Passion -->
+    <color name="passion_col_1">#c2000f</color>
+    <color name="passion_col_2">#750047</color>
+    <array name="passion_array">
+        <item>@color/passion_col_1</item>
+        <item>@color/passion_col_2</item>
+    </array>
+
+    <!-- Rocky mountain -->
+    <color name="black_hole_col_1">#212121</color>
+    <color name="black_hole_col_2">#000000</color>
+    <array name="black_hole_array">
+        <item>@color/black_hole_col_1</item>
+        <item>@color/black_hole_col_2</item>
+    </array>
+
+    <!-- Sky -->
+    <color name="sky_col_1">#33D0D6</color>
+    <color name="sky_col_2">#1B589C</color>
+    <array name="sky_array">
+        <item>@color/sky_col_1</item>
+        <item>@color/sky_col_2</item>
+    </array>
+
+    <!-- green lawn -->
+    <color name="green_lawn_col_1">#33D0D6</color>
+    <color name="green_lawn_col_2">#67A124</color>
+    <array name="green_lawn_array">
+        <item>@color/green_lawn_col_1</item>
+        <item>@color/green_lawn_col_2</item>
+    </array>
+
+    <!-- Grass -->
+    <color name="grass_lawn_col_1">#F2D22B</color>
+    <color name="grass_lawn_col_2">#67A124</color>
+    <array name="grass_lawn_array">
+        <item>@color/grass_lawn_col_1</item>
+        <item>@color/grass_lawn_col_2</item>
+    </array>
+
+    <!-- Flower -->
+    <color name="flower_lawn_col_1">#F2D22B</color>
+    <color name="flower_lawn_col_2">#AD0AAB</color>
+    <array name="flower_lawn_array">
+        <item>@color/flower_lawn_col_1</item>
+        <item>@color/flower_lawn_col_2</item>
+    </array>
+
+    <!-- North pole sky-->
+    <color name="north_pole_col_1">#0e1c1c</color>
+    <color name="north_pole_col_2">#8f33a0</color>
+    <color name="north_pole_col_3">#b6ff00</color>
+    <array name="north_pole_array">
+        <item>@color/north_pole_col_1</item>
+        <item>@color/north_pole_col_2</item>
+        <item>@color/north_pole_col_3</item>
+    </array>
+</resources>

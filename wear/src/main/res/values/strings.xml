@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">Essential</string>
+    <string name="wear_config_name">Choose a gradient</string>
+    <string name="background_gradients">Gradient</string>
+
+    <string name="aurora_name">Aurora</string>
+    <string name="fire_name">Fire</string>
+    <string name="aqua_name">Aqua</string>
+    <string name="love_name">Love</string>
+    <string name="after_sunset_name">After sunset</string>
+    <string name="forest_name">Forest</string>
+    <string name="tropical_paradise">Tropical paradise</string>
+    <string name="violet_illusion">Mirage</string>
+    <string name="beach">Beach</string>
+    <string name="fruit_flavour">Fruit flavour</string>
+    <string name="sun_is_rise">Sun is rising</string>
+    <string name="summer">Summer</string>
+    <string name="terra">Terra</string>
+    <string name="sunflower">Sunflower</string>
+    <string name="wildberries">Red fruits</string>
+    <string name="countrychic">Country chic</string>
+    <string name="watermelon">Watermelon</string>
+    <string name="goldfish">Gold fish</string>
+    <string name="deepspace">Deep space</string>
+    <string name="bee">Cocktail on the beach</string>
+    <string name="passion">Passion</string>
+    <string name="rockymountain">Black hole</string>
+    <string name="sky">Sky</string>
+    <string name="green_lawn">Green lawn</string>
+    <string name="grass">Grass</string>
+    <string name="flower">Flower</string>
+    <string name="north_pole">North pole sky</string>
+
+    <string-array name="gradients_face_array">
+        <item>@string/aurora_name</item>
+        <item>@string/fire_name</item>
+        <item>@string/aqua_name</item>
+        <item>@string/love_name</item>
+        <item>@string/after_sunset_name</item>
+        <item>@string/forest_name</item>
+        <item>@string/tropical_paradise</item>
+        <item>@string/violet_illusion</item>
+        <item>@string/beach</item>
+        <item>@string/fruit_flavour</item>
+        <item>@string/sun_is_rise</item>
+        <item>@string/summer</item>
+        <item>@string/terra</item>
+        <item>@string/sunflower</item>
+        <item>@string/wildberries</item>
+        <item>@string/countrychic</item>
+        <item>@string/watermelon</item>
+        <item>@string/goldfish</item>
+        <item>@string/deepspace</item>
+        <item>@string/bee</item>
+        <item>@string/passion</item>
+        <item>@string/rockymountain</item>
+        <item>@string/sky</item>
+        <item>@string/green_lawn</item>
+        <item>@string/grass</item>
+        <item>@string/flower</item>
+        <item>@string/north_pole</item>
+    </string-array>
+</resources>
