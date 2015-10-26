@@ -44,8 +44,6 @@ public class NatureGradientsWatchFaceCompanionConfigActivity extends Activity
     private static final String TAG = "DigitalWatchFaceConfig";
 
     // TODO: use the shared constants (needs covering all the samples with Gradle build model)
-    private static final String KEY_BACKGROUND_COLOR = "BACKGROUND_COLOR";
-    private static final String PATH_WITH_FEATURE = "/watch_face_config/Digital";
 
     private GoogleApiClient mGoogleApiClient;
     private String mPeerId;
@@ -128,7 +126,7 @@ public class NatureGradientsWatchFaceCompanionConfigActivity extends Activity
 
         if (mPeerId != null) {
             Uri.Builder builder = new Uri.Builder();
-            Uri uri = builder.scheme("wear").path(PATH_WITH_FEATURE).authority(mPeerId).build();
+            Uri uri = builder.scheme("wear").path(NatureGradientsWatchFaceUtil.PATH_WITH_FEATURE).authority(mPeerId).build();
             Wearable.DataApi.getDataItem(mGoogleApiClient, uri).setResultCallback(this);
             Wearable.DataApi.addListener(mGoogleApiClient, this);
 
@@ -156,8 +154,8 @@ public class NatureGradientsWatchFaceCompanionConfigActivity extends Activity
                     DataMapItem dataMapItem = DataMapItem.fromDataItem(dataItems.get(0));
 
                     // This should read the correct value.
-                    int value = dataMapItem.getDataMap().getInt(KEY_BACKGROUND_COLOR);
-                    updateUiForKey(KEY_BACKGROUND_COLOR, value);
+                    int value = dataMapItem.getDataMap().getInt(NatureGradientsWatchFaceUtil.KEY_BACKGROUND_COLOR);
+                    updateUiForKey(NatureGradientsWatchFaceUtil.KEY_BACKGROUND_COLOR, value);
                     Log.d(TAG, "aggiorno a startup background...");
                 }
 
@@ -226,7 +224,7 @@ public class NatureGradientsWatchFaceCompanionConfigActivity extends Activity
             DataMap config = new DataMap();
             config.putInt(configKey, color);
             byte[] rawData = config.toByteArray();
-            Wearable.MessageApi.sendMessage(mGoogleApiClient, mPeerId, PATH_WITH_FEATURE, rawData);
+            Wearable.MessageApi.sendMessage(mGoogleApiClient, mPeerId, NatureGradientsWatchFaceUtil.PATH_WITH_FEATURE, rawData);
 
             if (Log.isLoggable(TAG, Log.DEBUG)) {
                 Log.d(TAG, "Sent watch face config message: " + configKey + " -> "
@@ -243,7 +241,7 @@ public class NatureGradientsWatchFaceCompanionConfigActivity extends Activity
             }
 
             DataItem dataItem = dataEvent.getDataItem();
-            if (!dataItem.getUri().getPath().equals(PATH_WITH_FEATURE)) {
+            if (!dataItem.getUri().getPath().equals(NatureGradientsWatchFaceUtil.PATH_WITH_FEATURE)) {
                 continue;
             }
 
@@ -279,7 +277,7 @@ public class NatureGradientsWatchFaceCompanionConfigActivity extends Activity
      * @return whether UI has been updated
      */
     private boolean updateUiForKey(String configKey, final int color) {
-        if (configKey.equals(KEY_BACKGROUND_COLOR)) {
+        if (configKey.equals(NatureGradientsWatchFaceUtil.KEY_BACKGROUND_COLOR)) {
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
@@ -324,7 +322,7 @@ public class NatureGradientsWatchFaceCompanionConfigActivity extends Activity
                     String gradientName = gradients[itemPosition];
                     previewView.gradients = GradientsUtils.getGradients(getApplicationContext(),gradientName);
                     previewView.invalidate();
-                    sendConfigUpdateMessage(KEY_BACKGROUND_COLOR, GradientsUtils.getColorID(gradientName));
+                    sendConfigUpdateMessage(NatureGradientsWatchFaceUtil.KEY_BACKGROUND_COLOR, GradientsUtils.getColorID(gradientName));
             }
         }
 
